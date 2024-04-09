@@ -34,6 +34,7 @@ https://salon-backend-koay.onrender.com/api/auth/createuser
 #### 'HTTP header'
 `Content-Type:application/json`
 #### 'body'
+```json
 {
 
   "name": "username",
@@ -43,17 +44,19 @@ https://salon-backend-koay.onrender.com/api/auth/createuser
   "password": "123456789"
  
 }
+```
 
 
 
 ### Response
-
+```json
    {
 
        "success":true,
        
        "authtoken":"asdbashdvasgdkhsadgascdasdcasghdcasdasdhgascd"
    }
+   ```
 ## Users Login
 
 ### Request
@@ -68,6 +71,7 @@ https://salon-backend-koay.onrender.com/api/auth/login
 #### 'HTTP header'
 `Content-Type:application/json`
 #### 'body'
+```json
 {
 
   "email": "email@gmail.com",
@@ -75,18 +79,19 @@ https://salon-backend-koay.onrender.com/api/auth/login
   "password": "123456789"
  
 }
+```
 
 
 
 ### Response
-
+```json
    {
 
        "success":true,
 
        "authtoken":"asdbashdvasgdkhsadgascdasdcasghdcasdasdhgascd"
    }
-
+```
 
 
 ## Create Availability
@@ -103,6 +108,7 @@ https://salon-backend-koay.onrender.com/api/availability
 #### 'HTTP header'
 `Content-Type:application/json`
 #### 'body'
+```json
 {
 
   "availability": [
@@ -162,11 +168,11 @@ https://salon-backend-koay.onrender.com/api/availability
     
   ]
 }
-
+```
 
 
 ### Response
-
+```json
    {
 
   "availability": [
@@ -227,7 +233,7 @@ https://salon-backend-koay.onrender.com/api/availability
   ]
 }
 
-
+```
 
 ##  Check Available Slots In Given Date 
 
@@ -242,6 +248,7 @@ https://salon-backend-koay.onrender.com/api/available-slots/2024-04-15
 
 
 ### Response
+```json
 [
   {
 
@@ -255,10 +262,10 @@ https://salon-backend-koay.onrender.com/api/available-slots/2024-04-15
     "_id": "66144379b9acb500e40fd646"
   }
 ]
+```
 
 
-
-## Create New Users
+## To Boook Slot
 
 ### Request
 
@@ -270,9 +277,11 @@ https://salon-backend-koay.onrender.com/api/booking
 
 #### HTTP header
 `Content-Type:application/json`
+
 `auth-token:dasdasdasdeewfdcxvrgfvfvfghtbghy`
 
 #### Body
+```json
 {
 
   "date":"2024-04-15",
@@ -285,11 +294,11 @@ https://salon-backend-koay.onrender.com/api/booking
         }
 
 }
-
+```
 
 
 ### Response
-
+```json
    {
 
   "user": "6613fae3f043c955605f3632",
@@ -305,7 +314,7 @@ https://salon-backend-koay.onrender.com/api/booking
   "__v": 0
 }
 
-
+```
 
 ## All Booked slots
 
@@ -319,7 +328,7 @@ http://localhost:5000/api/booking
 https://salon-backend-koay.onrender.com/api/booking
 
 ### Response
-
+```json
    [
   {
 
@@ -341,6 +350,7 @@ https://salon-backend-koay.onrender.com/api/booking
     "user": "6613fae3f043c955605f3632",
     "__v": 0
   }]
+  ```
 ## Users all Booked slots
 
 ### Request
@@ -353,10 +363,11 @@ http://localhost:5000/api/booking/usersbooking
 https://salon-backend-koay.onrender.com/api/booking/usersbooking
 #### HTTP header
 `Content-Type:application/json`
+
 `auth-token:dasdasdasdeewfdcxvrgfvfvfghtbghy`
 
 ### Response
-
+```json
    [
   {
 
@@ -378,7 +389,7 @@ https://salon-backend-koay.onrender.com/api/booking/usersbooking
     "user": "6613fae3f043c955605f3632",
     "__v": 0
   }]
-
+```
 
 ## Delete user
 
@@ -393,15 +404,17 @@ https://salon-backend-koay.onrender.com/api/auth/delete
 
 #### 'HTTP header'
 `Content-Type:application/json`
+
 `auth-token:asdjhadtewwggcfyugeyfgcvydutfev`
 
 ### Response
-
+```json
   {
 
   "sucess": "user is deleted"
 
 }
+```
 ## Delete Availability in Given Date
 
 ### Request
@@ -414,12 +427,13 @@ http://localhost:5000/api/available-slots/2024-04-15
 https://salon-backend-koay.onrender.com/available-slots/2024-04-15
 
 ### Response
-
+```json
   {
 
   "sucess": "data is deleted"
 
 }
+```
 ## Users slot Delete
 
 ### Request
@@ -433,9 +447,11 @@ https://salon-backend-koay.onrender.com/api/booking/deleteusersslot
 
 #### 'HTTP header'
 `Content-Type:application/json`
+
 `auth-token:asdjhadtewwggcfyugeyfgcvydutfev`
 
 #### Body
+```json
 {
 
   "date":"2024-04-15",
@@ -448,14 +464,14 @@ https://salon-backend-koay.onrender.com/api/booking/deleteusersslot
         }
 
 }
-
+```
 ### Response
-
+```json
   {
 
   "sucess": "slot is deleted"
 
 }
 
-
+```
   
