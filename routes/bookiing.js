@@ -195,7 +195,8 @@ router.delete(
           },
         },
       ]);
-      if (!data1) {
+      console.log(data1)
+      if (data1.length==0) {
         return res.status(400).json("slot is not available");
       }
      
@@ -262,7 +263,7 @@ router.delete(
           console.error("Error updating slot:", error);
           return res.status(400).json("error");
         });
-      
+      console.log("adity")
      var book= await booking.findByIdAndDelete({user:req.user.id})
      
       res.json(book," slot deleted ");
