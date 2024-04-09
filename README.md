@@ -29,6 +29,8 @@ The REST API to the example app is described below.
 
 http://localhost:5000/api/auth/createuser
 
+https://salon-backend-koay.onrender.com/api/auth/createuser
+
 #### 'HTTP header'
 `Content-Type:application/json`
 #### 'body'
@@ -60,6 +62,8 @@ http://localhost:5000/api/auth/createuser
 
 
 http://localhost:5000/api/auth/login
+
+https://salon-backend-koay.onrender.com/api/auth/login
 
 #### 'HTTP header'
 `Content-Type:application/json`
@@ -93,6 +97,8 @@ http://localhost:5000/api/auth/login
 
 
 http://localhost:5000/api/availability
+
+https://salon-backend-koay.onrender.com/api/availability
 
 #### 'HTTP header'
 `Content-Type:application/json`
@@ -232,6 +238,8 @@ http://localhost:5000/api/availability
 
 http://localhost:5000/api/available-slots/2024-04-15
 
+https://salon-backend-koay.onrender.com/api/available-slots/2024-04-15
+
 
 ### Response
 [
@@ -257,6 +265,8 @@ http://localhost:5000/api/available-slots/2024-04-15
 `POST /api/booking
 
 http://localhost:5000/api/booking
+
+https://salon-backend-koay.onrender.com/api/booking
 
 #### HTTP header
 `Content-Type:application/json`
@@ -306,6 +316,8 @@ http://localhost:5000/api/booking
 
 http://localhost:5000/api/booking
 
+https://salon-backend-koay.onrender.com/api/booking
+
 ### Response
 
    [
@@ -337,6 +349,8 @@ http://localhost:5000/api/booking
 
 
 http://localhost:5000/api/booking/usersbooking
+
+https://salon-backend-koay.onrender.com/api/booking/usersbooking
 #### HTTP header
 `Content-Type:application/json`
 `auth-token:dasdasdasdeewfdcxvrgfvfvfghtbghy`
@@ -375,6 +389,8 @@ http://localhost:5000/api/booking/usersbooking
 
 http://localhost:5000/api/auth/delete
 
+https://salon-backend-koay.onrender.com/api/auth/delete
+
 #### 'HTTP header'
 `Content-Type:application/json`
 `auth-token:asdjhadtewwggcfyugeyfgcvydutfev`
@@ -395,6 +411,8 @@ http://localhost:5000/api/auth/delete
 
 http://localhost:5000/api/available-slots/2024-04-15
 
+https://salon-backend-koay.onrender.com/available-slots/2024-04-15
+
 ### Response
 
   {
@@ -410,6 +428,8 @@ http://localhost:5000/api/available-slots/2024-04-15
 
 
 http://localhost:5000/api/booking/deleteusersslot
+
+https://salon-backend-koay.onrender.com/api/booking/deleteusersslot
 
 #### 'HTTP header'
 `Content-Type:application/json`
