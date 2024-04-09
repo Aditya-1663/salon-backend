@@ -34,7 +34,7 @@ router.post(
         return res.status(400).json({ errors: errors.array() });
       }
       const newdate = new Date(date);
-      console.log(newdate);
+     
       const data1 = await availability1.aggregate([
         {
           $match: { "availability.date": newdate },
@@ -70,7 +70,7 @@ router.post(
    if(slotsWithCapacity.length==0){
     return res.status(400).json("slot not available ");
    }
-        console.log(typeof slotsWithCapacity)
+        
       if (!slotsWithCapacity[0].maxCapacity) {
         return res.status(400).json("slot not available");
       }
@@ -110,9 +110,9 @@ router.post(
         .updateOne(filter, update, options)
         .then((updatedSlot) => {
           if (updatedSlot) {
-            console.log("Slot updated successfully:", updatedSlot);
+            console.log("Slot updated successfully");
           } else {
-            console.log(updatedSlot);
+           
             console.log("Slot not found.");
           }
         })
@@ -195,7 +195,7 @@ router.delete(
           },
         },
       ]);
-      console.log(data1)
+
       if (data1.length==0) {
         return res.status(400).json("slot is not available");
       }
@@ -213,7 +213,7 @@ router.delete(
    if(slotsWithCapacity.length==0){
     return res.status(400).json("slot not available ");
    }
-        console.log(typeof slotsWithCapacity)
+        
       if (!slotsWithCapacity[0].maxCapacity) {
         return res.status(400).json("slot not available");
       }
@@ -253,17 +253,17 @@ router.delete(
         .updateOne(filter, update, options)
         .then((updatedSlot) => {
           if (updatedSlot) {
-            console.log("Slot updated successfully:", updatedSlot);
+           
           } else {
-            console.log(updatedSlot);
-            console.log("Slot not found.");
+           
+            return res.status(400).json("slot not available");
           }
         })
         .catch((error) => {
           console.error("Error updating slot:", error);
           return res.status(400).json("error");
         });
-      console.log("adity")
+      
      var book= await booking.findByIdAndDelete({user:req.user.id})
      
       res.json(book," slot deleted ");

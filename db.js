@@ -9,7 +9,7 @@ const connectTomongo = async () => {
     mongoose.connect(mongouri);
     await console.log("connected successfully");
   } catch (err) {
-    console.log("adi");
+    console.log(err);
   }
 };
 module.exports = connectTomongo;

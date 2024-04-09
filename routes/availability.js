@@ -34,7 +34,7 @@ router.post(
       });
 
       success = true;
-      console.log(typeof h);
+      
     } catch (err) {
       console.log(err);
     }
